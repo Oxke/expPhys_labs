@@ -1,0 +1,53 @@
+\input{../../preable_report.tex}
+
+\title{Report Lab 1\\\small Experimental Physics for AI 2}
+\author{G, C, D, O}
+\date{First semester 2024 \-- 2025}
+
+\begin{document}
+
+\maketitle
+
+\chapter{Measurement of the current-voltage characteristic of a resistor}
+\chapter{Measurement of the current-voltage characteristic of a diode}
+\section{Goal}
+Now we want to measure the current-voltage characteristic of a diode, which
+should not be linear. Indeed, according to Shockley's law, it is exponential:
+\[
+    I = I_0 \left( e^{\frac{qV}{gkT}} - 1 \right)
+\]
+where $I_0$ is the reverse saturation current, $q$ is the electron charge, \(k\)
+is the Boltzmann constant, \(T\) is the temperature, and \(g\) is the diode
+type-dependent constant. In this chapter we will try to verify this law.
+
+Moreover for practical applications it's common practice to define the diode's
+\emph{threshold voltage} as the voltage at which the diode starts conducting a
+``significant'' current. We will try to measure this value as well.
+
+\section{Method}
+Using a similar setup as the one in part one, we recorded the measured values of
+current at different voltages. The setup is shown in figure~\ref{fig:setup-diode}.
+
+\begin{figure}[ht]
+    \centering
+    \incfig[.45]{setup-diode}
+    \caption{Setup diode}\label{fig:setup-diode}
+\end{figure}
+
+\section{Data}
+The data we collected is shown in table~\ref{tab:diode-data} and is represented
+graphically in figure~\ref{tab:diode-graph}.
+
+\begin{table}[ht]
+    \centering
+\begin{tabular}{ll|ll}
+       \multicolumn{2}{l}{\bfseries Voltage (\(V\))} &
+       \multicolumn{2}{l}{\bfseries Current (\(\mu A\))} \\
+       \hline
+       \csvreader[head to column names]{../data.csv}{}%
+       {\Vdetapprox&\errVdet&\Idetapprox&\errIdet\\}
+   \end{tabular}
+       \caption{Data collected for the diode}\label{tab:diode-data}
+   \end{table}
+\end{document}
+
