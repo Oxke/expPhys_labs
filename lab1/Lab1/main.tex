@@ -26,28 +26,59 @@ Moreover for practical applications it's common practice to define the diode's
 
 \section{Method}
 Using a similar setup as the one in part one, we recorded the measured values of
-current at different voltages. The setup is shown in figure~\ref{fig:setup-diode}.
+current at different voltages. The setup is shown in
+figure~\ref{fig:setup-diode}, where the voltmeter is a handheld Fluke
+multimeter and the ammeter is a Agilent bench multimeter.
 
 \begin{figure}[ht]
     \centering
-    \incfig[.45]{setup-diode}
-    \caption{Setup diode}\label{fig:setup-diode}
+    \incfig[.35]{setup-diode}
+    \caption{Setup of the diode experiment: on the left the diagram showing
+    the circuit made, on the right a photo of the setup}\label{fig:setup-diode}
 \end{figure}
 
-\section{Data}
-The data we collected is shown in table~\ref{tab:diode-data} and is represented
-graphically in figure~\ref{tab:diode-graph}.
+Later, in section~\ref{sec:analysis}, we will perform various fits to the data to
+verify the exponential relation and estimate the values of the parameters.
 
-\begin{table}[ht]
-    \centering
-\begin{tabular}{ll|ll}
+\section{Data}\label{sec:data}
+The data we collected is shown in table and represented graphically in
+figure~\ref{fig:diode-data}. The bench multimeter for the current measurements
+had an accuracy of \(\pm 0.05\% + 0.05\mu A\) in the \(500 \mu A\) range; and
+the handheld multimeter had an accuracy of \(\pm 0.5\% + 0.002V\) in the \(2 V\)
+range.
+
+\begin{figure}[ht]
+	{\small
+\begin{tabular}[ht]{ll|ll}
        \multicolumn{2}{l}{\bfseries Voltage (\(V\))} &
        \multicolumn{2}{l}{\bfseries Current (\(\mu A\))} \\
        \hline
        \csvreader[head to column names]{../data.csv}{}%
-       {\Vdetapprox&\errVdet&\Idetapprox&\errIdet\\}
-   \end{tabular}
-       \caption{Data collected for the diode}\label{tab:diode-data}
-   \end{table}
+       {\Vdetapprox&$\pm$ \errVdet&\Idetapprox&$\pm$ \errIdet\\}
+\end{tabular}}
+\begin{tikzpicture}[baseline=(current bounding box.base), scale=.9]
+    \begin{semilogyaxis} [
+        table/col sep=comma,
+        title = {Diode current-voltage data},
+        xlabel = {Voltage (\(V\))},
+        ylabel = {Current (\(\mu A\))},
+        % xmin = 2,
+        no markers,
+    ]
+
+    \addplot+ [
+            only marks, mark size=.2pt,
+            error bars/.cd,
+                x dir = both, x explicit,
+                y dir = both, y explicit,
+        ] table [x=Vdetapprox, y=Idetapprox, x error=errVdet, y error=errIdet] {../data.csv};
+    
+    \end{semilogyaxis}
+\end{tikzpicture}
+       \caption{Data collected for the diode}\label{fig:diode-data}
+   \end{figure}
+
+   \section{Analysis}\label{sec:analysis}
+
 \end{document}
 
