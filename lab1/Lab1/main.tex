@@ -100,14 +100,7 @@ range.
     We decided to keep the error only in the independent variable since it was
     much greater than the one in the dependent variable. 
    in \texttt{R} we ran the following commands:
-   \begin{verbatim}
-diode.data <- read.csv("data.csv")
-diode.selected <- diode.data[diode.data$Vdetapprox >= 2.399,]
-logIerr <- diode.selected$errIdet/diode.selected$Idetapprox
-diode.lm <- lm(log(Idetapprox) ~ Vdetapprox, data=diode.selected,
-                                             weights=1/logIerr^2)
-summary(diode.lm)
-   \end{verbatim}
+\lstinputlisting[language=R, firstline=1, lastline=6]{../analysis.r}
    obtaining the following result:
    \begin{verbatim}
 Coefficients:
@@ -125,12 +118,16 @@ F-statistic:  3073 on 1 and 19 DF,  p-value: < 2.2e-16
    voltage is exponential. The formula is then:
    \begin{align*}
        \log I_{0} = -67 \pm 1 &\implies I_{0} = 10^{-29} \pm 
-       10^{-29} \\
+       10^{-29} \mu A\\
        \frac{q}{gkT} = 28.2 \pm 0.5 &\implies g = \frac{38.6}{28.2} \mp
-       \frac{0.5}{28.2^2} = 1.368 \pm 0.006 \\
+       \frac{0.5}{28.2^2} = 1.368 \pm 0.006\\
        I \approx 1e-29 e^{\frac{q}{kT} \cdot \frac{1}{1.368} \cdot V} &= 10^{-29}
-       e^{28.2 V}
+       e^{28.2 V} \mu A
    \end{align*}
+   (We did not take the measurement for the temperature, so actually 38.6 here
+   should not obviously be a constant, but as we don't have the measurement, we
+   considered it as such, consequently the error on \(g\) is much smaller than
+   the one it should be).
    In figure~\ref{fig:fit} we can see in a graph the accuracy of the fit. Now we
    can justify the approximation~\eqref{eq:approx} as indeed for \(V \ge 2.4\)
    we clearly have that the exponent \(\frac{qV}{gkT} \ge 67.68 \gg 1\), more
@@ -139,6 +136,12 @@ F-statistic:  3073 on 1 and 19 DF,  p-value: < 2.2e-16
    \[
        \|f - g\|_{\infty} = |{(f - g)}{(67.68)}| \approx 4.05 \cdot 10^{-30}
    \]
+   \paragraph{Chi-squared test} Finally, we performed a chi-squared test on the
+   residuals of the fit to see if the errors were independent and normally
+   distributed (assuming homoscedasticity), which is what we expect:
+   \lstinputlisting[language=R, firstline=21]{../analysis.r}
+   Which returns a p-value of \(0.65 > 0.05\), so we can't reject the null
+   hypothesis that the errors are independent and the fit is good.
 \begin{figure}
     \centering
 \begin{tikzpicture}
@@ -183,7 +186,7 @@ F-statistic:  3073 on 1 and 19 DF,  p-value: < 2.2e-16
         color=orange,
         ]
         {0};
-    \end{axis}
+\end{axis}
 \end{tikzpicture}
 \caption{Exponential fit of the data}\label{fig:fit}
 \end{figure}
@@ -193,28 +196,14 @@ As explained before, the \emph{threshold voltage} is said to be the voltage at
 which a diode starts conducting a ``significant'' current. It's obtained by
 fitting the data as a linear relationship and then taking the x-intercept of the
 line. To decide how many points to take out of the selected ones, we will
-perform the Durbin\--Watson test to see if the residuals are correlated. If it
-turns out that they are correlated, then one of the hypothesis of the linear
-regression is not satisfied. We will take the largest set of points, out of the
-right part of the graph, such that \(|d-2|\), where \(d\) is the test statistic of the
-Durbin\--Watson test, is less than \(0.5\).
-In \texttt{R} code this translates to
-\begin{verbatim}
-l <- length(diode.selected$Vdetapprox)
-d <- 1
-while (abs(d - 2) > .5) {
-    l = l - 1
-    diode.sel_thresh = tail(diode.selected, l)
-    diode.lm_threshold <- lm(Idetapprox ~ Vdetapprox,
-                             data=diode.sel_thresh)
-    r = diode.lm_threshold$residuals
-    SSR = sum(diode.lm_threshold$residuals^2)
-    DW_sum = sum((r[2:length(r)] - r[1:length(r)-1])^2)
-    d = DW_sum / SSR
-}
-\end{verbatim}
-obtaining that we need to keep the last 4 points. Finally we calculated the
-\(V-\)coordinate of the fitting line of those 4 points. Since we know from the
+perform the chi-squared test to see if the residuals are independent normal
+random variables. The null hypothesis for each value of \(l\) (the number of
+points) is that the errors are independent and normally distributed, while the
+alternative hypothesis is that they are not. We will then take the biggest \(l\)
+such that we can't reject the null hypothesis. In \texttt{R} code this is:
+\lstinputlisting[language=R, firstline=8, lastline=20]{../analysis.r}
+obtaining that we need to keep the last 6 points. Finally we calculated the
+\(V\)-coordi\-nate of the fitting line of those 6 points. Since we know from the
 linear model that the line has equation \(i = mv + q\), with \(m\) and \(q\)
 parameters saved in the variable \texttt{diode.lm\_threshold\$coefficients}, and
 because we know the error must be 
@@ -223,9 +212,73 @@ because we know the error must be
 \]
 obtaining a value of 
 \begin{align*}
-    q = -14.2 \pm 0.7 mA \quad m = 5.7 \pm 0.3 mA / V \\
-    \implies V_{threshold} = \frac{14.2}{5.7} \mp \frac{0.7}{5.7} \mp
-    \frac{-14.2 \cdot 0.3}{5.7^2} = 2.51 \pm 0.24
+    q = -12.6 \pm 0.6 \,mA \quad m = 5.0 \pm 0.2 \,mA / V \\
+    \implies V_{\text{threshold}} = \frac{12.5}{5.0} \mp \frac{0.5}{5.0} \mp
+    \frac{12.6 \cdot 0.2}{5.0^2} = 2.51 \pm 0.23 V
 \end{align*}
-\end{document}
 
+\begin{figure}
+    \centering
+\begin{tikzpicture}
+    \begin{axis} [
+        table/col sep=comma,
+        title = {Diode current-voltage data},
+        xlabel = {Voltage (\(V\))},
+        ylabel = {Current (\(\mu A\))},
+        xmin = 2.395, xmax = 2.59,
+        ymax = 320, ymin = -20,
+        no markers,
+        legend pos = north west,
+        axis x line=bottom,
+        xtick = {2.4, 2.45, 2.51, 2.55},
+    ]
+
+    \addplot+ [
+            only marks, mark size=1pt,
+            error bars/.cd,
+                x dir = both, x explicit,
+                y dir = both, y explicit,
+        ] table [x=Vdetapprox, y=Idetapprox, x error=errVdet, y error=errIdet] {../data.csv};
+    \addlegendentry{Data}
+
+    \addplot [
+        domain=2.5:2.6,
+        samples=100,
+        color=orange,
+        thick,
+        ]
+        {5005 * x - 12563};
+    \addlegendentry{Linear fit}
+
+    % vertical line at x = 2.51
+    \draw[dashed] (axis cs:2.51, -20) -- (axis cs:2.51, 320);
+
+    % horizontal line at y = 0
+    \draw[dashed] (axis cs:2.395, 0) -- (axis cs:2.59, 0);
+
+
+\end{axis}
+\end{tikzpicture}
+\caption{Threshold voltage}\label{fig:threshold}
+\end{figure}
+
+\section{Conclusion}
+A clear improvement would be to measure the temperature of
+the room in order to have a more precise value of the constant \(g\). Moreover,
+If we had more datapoints, we could have performed a more accurate fit and have
+smaller errors. 
+
+That said, we have successfully verified Shockley's law for a diode and
+estimated the value of the parameters. We also measured the threshold voltage of
+the diode. The results are consistent with the theory: for silicon diodes the
+ideality factor \(g\) should be between 1 and 2, and the threshold voltage makes
+sense that is around \(2.5V\), since our diode was a blue LED, so if we see the
+threshold voltage as the voltage at which the LED starts emitting light, the
+first photon has energy \(E = h\nu\) with \(\nu = c/\lambda \), \(c\) the speed of light and \(h\) Planck's constant. If we
+add \(E = qV_\text{threshold}  \) and solve for the wavelength \(\lambda\) we get
+\[
+    \lambda = \frac{hc}{qV_\text{threshold}  } \approx 495 \, nm
+\]
+which is in the range of blue light.
+
+\end{document}

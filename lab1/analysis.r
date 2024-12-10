@@ -6,16 +6,20 @@ diode.lm <- lm(log(Idetapprox) ~ Vdetapprox, data=diode.selected,
 summary(diode.lm)
 
 l <- length(diode.selected$Vdetapprox)
-d <- 1
-while (abs(d - 2) > .5) {
+pval <- 1
+while (pval < 0.05) {
     l = l - 1
     diode.sel_thresh = tail(diode.selected, l)
     diode.lm_threshold <- lm(Idetapprox ~ Vdetapprox,
                              data=diode.sel_thresh)
     r = diode.lm_threshold$residuals
-    SSR = sum(diode.lm_threshold$residuals^2)
-    DW_sum = sum((r[2:length(r)] - r[1:length(r)-1])^2)
-    d = DW_sum / SSR
+    chisq <- sum(r^2 / var(r))
+    pval <- pchisq(chisq, l - 2)
 }
-
 summary(diode.lm_threshold)
+
+res <- exp(diode.lm$fitted.values) - diode.selected$Idetapprox
+chisq <- sum(res^2 / var(res))
+df <- length(diode.lm$residuals) - length(diode.lm$coefficients)
+pval <- pchisq(chisq, df)
+pval
