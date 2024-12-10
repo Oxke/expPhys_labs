@@ -2,7 +2,6 @@
 \usepackage{layout}
 \usepackage[a4paper, total={5in,9in}]{geometry}
 \usepackage[T1]{fontenc}
-% \usepackage[italian]{babel}
 \usepackage{mathtools}
 \usepackage{amsthm}
 \usepackage[framemethod=TikZ]{mdframed}
@@ -70,33 +69,6 @@
     }
 \begin{mdframed}[]\relax}{
 \end{mdframed}}
-
-% \newenvironment{definition}[1][]{
-%     \refstepcounter{theo}
-%      \ifstrempty{#1}
-%     {\mdfsetup{
-%         frametitle={
-%             \tikz[baseline=(current bounding box.east),outer sep=0pt]
-%             \node[anchor=east,rectangle,fill=violet!20,rounded corners=5pt]
-%             {\strut Definizione~\thetheo};}
-%         }
-%     }{\mdfsetup{
-%         frametitle={
-%             \tikz[baseline=(current bounding box.east),outer sep=0pt]
-%             \node[anchor=east,rectangle,fill=violet!20,rounded corners=5pt]
-%             {\strut Definizione~\thetheo:~#1};}
-%         }
-%     }
-%     \mdfsetup{
-%         roundcorner=10pt,
-%         innertopmargin=10pt,linecolor=violet!20,
-%         linewidth=2pt,topline=true,
-%         frametitleaboveskip=\dimexpr-\ht\strutbox\relax,
-%         nobreak=true
-%     }
-% \begin{mdframed}[]\relax}{
-% \end{mdframed}}
-
 \newtcolorbox[auto counter, number within=section]{definition}[2][]{
     colframe=violet!0,
     coltitle=violet, % Title text color
@@ -169,25 +141,6 @@
 \DeclareRobustCommand{\rchi}{{\mathpalette\irchi\relax}} % beautiful chi
 \newcommand{\irchi}[2]{\raisebox{\depth}{$#1\chi$}} % inner command, used by \rchi
 
-% \newtcolorbox[auto counter, number within=section]{eser}[1][]{
-%     title=Esercizio~\thetcbcounter,
-%     label={eser:\thetcbcounter},
-% 	% skin=bicolor,
-% 	breakable,
-% 	enhanced,
-% 	frame hidden,
-% 	boxrule = 0sp,
-% 	borderline west = {1.5pt}{-5pt}{black},
-% 	sharp corners,
-% 	detach title,
-% 	before upper = \tcbtitle\par\smallskip,
-% 	coltitle = black,
-% 	fonttitle = \bfseries\sffamily,
-% 	description font = \mdseries,
-% 	separator sign none,
-% 	colback = black!0,
-%     colbacktitle=black!5
-% }
 \newtcolorbox[auto counter, number within=section]{eser}[1][]{
     colframe=black!0,
     coltitle=black!70, % Title text color
