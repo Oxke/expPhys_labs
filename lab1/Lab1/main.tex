@@ -32,7 +32,8 @@ multimeter and the ammeter is a Agilent bench multimeter.
 
 \begin{figure}[ht]
     \centering
-    \incfig[.35]{setup-diode}
+    \incfig[.45]{setup-diode}
+    \includegraphics[width=.45\textwidth]{figures/setup.png}
     \caption{Setup of the diode experiment: on the left the diagram showing
     the circuit made, on the right a photo of the setup}\label{fig:setup-diode}
 \end{figure}
@@ -77,8 +78,154 @@ range.
 \end{tikzpicture}
        \caption{Data collected for the diode}\label{fig:diode-data}
    \end{figure}
+   from the graph in figure~\ref{fig:diode-data} we can already see that after a
+   certain voltage value (about 2.4) the graph follows accurately an exponential
+   relationship, as expected. The previous values are very low in current and
+   have a greater error. We will perform the analysis only on the part of the
+   data which shows a clear exponential behavior, that is for voltages greater
+   than \(2.399\) and currents greater than \(1.74\mu A\) (medium values).
+   \section{Analysis}\label{sec:analysis}   
 
-   \section{Analysis}\label{sec:analysis}
+   \subsection{Shockley's law}
+    We used the following approximation:
+    \begin{equation}\label{eq:approx}
+        \ln {(e^{x} - 1)} \approx x \quad \text{for } x \gg 1
+    \end{equation}
+    so that we could linearize the relationship as
+    \[
+        I = I_0 \left( e^{\frac{qV}{gkT}} - 1 \right) \approx I_0
+        e^{\frac{qV}{gkT}} \implies \log I \approx \frac{q}{gkT} V + \log I_{0}
+    \]
+    Then we performed a linear regression on the data, with the errors on \(V\).
+    We decided to keep the error only in the independent variable since it was
+    much greater than the one in the dependent variable. 
+   in \texttt{R} we ran the following commands:
+   \begin{verbatim}
+diode.data <- read.csv("data.csv")
+diode.selected <- diode.data[diode.data$Vdetapprox >= 2.399,]
+logIerr <- diode.selected$errIdet/diode.selected$Idetapprox
+diode.lm <- lm(log(Idetapprox) ~ Vdetapprox, data=diode.selected,
+                                             weights=1/logIerr^2)
+summary(diode.lm)
+   \end{verbatim}
+   obtaining the following result:
+   \begin{verbatim}
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  -66.698      1.294  -51.55   <2e-16 ***
+Vdetapprox    28.215      0.509   55.44   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
+Residual standard error: 44.5 on 19 degrees of freedom
+Multiple R-squared:  0.9939, Adjusted R-squared:  0.9935 
+F-statistic:  3073 on 1 and 19 DF,  p-value: < 2.2e-16  
+   \end{verbatim}
+   So we can very confidently say that the relation between the current and the
+   voltage is exponential. The formula is then:
+   \begin{align*}
+       \log I_{0} = -67 \pm 1 &\implies I_{0} = 10^{-29} \pm 
+       10^{-29} \\
+       \frac{q}{gkT} = 28.2 \pm 0.5 &\implies g = \frac{38.6}{28.2} \mp
+       \frac{0.5}{28.2^2} = 1.368 \pm 0.006 \\
+       I \approx 1e-29 e^{\frac{q}{kT} \cdot \frac{1}{1.368} \cdot V} &= 10^{-29}
+       e^{28.2 V}
+   \end{align*}
+   In figure~\ref{fig:fit} we can see in a graph the accuracy of the fit. Now we
+   can justify the approximation~\eqref{eq:approx} as indeed for \(V \ge 2.4\)
+   we clearly have that the exponent \(\frac{qV}{gkT} \ge 67.68 \gg 1\), more
+   precisely, if \(f, g: [67.68, \infty)\) are respectively the functions \(x
+   \mapsto \ln {(e^{x} - 1)}\) and \(x \mapsto x\) then
+   \[
+       \|f - g\|_{\infty} = |{(f - g)}{(67.68)}| \approx 4.05 \cdot 10^{-30}
+   \]
+\begin{figure}
+    \centering
+\begin{tikzpicture}
+    \begin{axis} [
+        table/col sep=comma,
+        title = {Diode current-voltage data},
+        xlabel = {Voltage (\(V\))},
+        ylabel = {Current (\(\mu A\))},
+        xmin = 2.395, 
+        ymax = 320,
+        no markers,
+        legend pos = north west,
+    ]
+
+    \addplot+ [
+            only marks, mark size=1pt,
+            error bars/.cd,
+                x dir = both, x explicit,
+                y dir = both, y explicit,
+        ] table [x=Vdetapprox, y=Idetapprox, x error=errVdet, y error=errIdet] {../data.csv};
+    \addlegendentry{Data}
+    \addplot [
+        domain=2.39:2.58,
+        samples=100,
+        color=orange,
+        thick,
+        ]
+        {1.08e-29 * exp(28.2 * x)};
+    \addlegendentry{Mean fit}
+
+    \addplot [
+        domain=2.39:2.55,
+        samples=100,
+        color=orange,
+        ]
+        {2e-29 * exp(28.2 * x)};
+    \addlegendentry{max\&min fit}
+
+    \addplot [
+        domain=2.39:2.58,
+        samples=100,
+        color=orange,
+        ]
+        {0};
+    \end{axis}
+\end{tikzpicture}
+\caption{Exponential fit of the data}\label{fig:fit}
+\end{figure}
+
+\subsection{Threshold voltage}
+As explained before, the \emph{threshold voltage} is said to be the voltage at
+which a diode starts conducting a ``significant'' current. It's obtained by
+fitting the data as a linear relationship and then taking the x-intercept of the
+line. To decide how many points to take out of the selected ones, we will
+perform the Durbin\--Watson test to see if the residuals are correlated. If it
+turns out that they are correlated, then one of the hypothesis of the linear
+regression is not satisfied. We will take the largest set of points, out of the
+right part of the graph, such that \(|d-2|\), where \(d\) is the test statistic of the
+Durbin\--Watson test, is less than \(0.5\).
+In \texttt{R} code this translates to
+\begin{verbatim}
+l <- length(diode.selected$Vdetapprox)
+d <- 1
+while (abs(d - 2) > .5) {
+    l = l - 1
+    diode.sel_thresh = tail(diode.selected, l)
+    diode.lm_threshold <- lm(Idetapprox ~ Vdetapprox,
+                             data=diode.sel_thresh)
+    r = diode.lm_threshold$residuals
+    SSR = sum(diode.lm_threshold$residuals^2)
+    DW_sum = sum((r[2:length(r)] - r[1:length(r)-1])^2)
+    d = DW_sum / SSR
+}
+\end{verbatim}
+obtaining that we need to keep the last 4 points. Finally we calculated the
+\(V-\)coordinate of the fitting line of those 4 points. Since we know from the
+linear model that the line has equation \(i = mv + q\), with \(m\) and \(q\)
+parameters saved in the variable \texttt{diode.lm\_threshold\$coefficients}, and
+because we know the error must be 
+\[
+    v = -\frac{q}{m} \implies \delta v = -\frac{\delta q}{m} + \frac{q\,\delta m}{m^2}
+\]
+obtaining a value of 
+\begin{align*}
+    q = -14.2 \pm 0.7 mA \quad m = 5.7 \pm 0.3 mA / V \\
+    \implies V_{threshold} = \frac{14.2}{5.7} \mp \frac{0.7}{5.7} \mp
+    \frac{-14.2 \cdot 0.3}{5.7^2} = 2.51 \pm 0.24
+\end{align*}
 \end{document}
 
