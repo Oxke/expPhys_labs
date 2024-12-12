@@ -1,7 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1733858604.22265 "main.tex" "main.pdf" "main" 1733858607.01001 0
-  "../../preable_report.tex" 1733852702.71357 7414 f31e3066a7f44c2e8527dd17dcc041bd ""
-  "../analysis.r" 1733855909.9118 868 aca28ce9c123f8dc8b11db9381b1dc0e ""
+["pdflatex"] 1734012076.22902 "main.tex" "main.pdf" "main" 1734012079.10296 0
+  "../analysis.r" 1734011594.26118 964 4003801a900c4a8bcbfb2b423f186b99 ""
   "../data.csv" 1733656971.32765 2628 70f4c2313fa89a25de0c729490f2146c ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1727349926 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -295,9 +294,9 @@
   "figures/setup-diode.pdf" 1733132594.3583 3002 de16ea98e86028543bd8c8daa7a1571a ""
   "figures/setup-diode.pdf_tex" 1733132594.3583 2431 b5d05856671411c94049ea323018abeb ""
   "figures/setup.png" 1733849291.14748 2464409 f8a99595d51caee709f6198b4b93ff3c ""
-  "main.aux" 1733858606.85348 3118 400bf2845c9ea6ebee9ab00fe7cac22a "pdflatex"
-  "main.out" 1733858606.85348 1456 f1ba8bdca891d25f7765f89ef5f87059 "pdflatex"
-  "main.tex" 1733858602.33671 11318 f209e031efb0a2fbc89bdd430efb8985 ""
+  "main.aux" 1734012078.95927 3118 400bf2845c9ea6ebee9ab00fe7cac22a "pdflatex"
+  "main.out" 1734012078.95927 1456 f1ba8bdca891d25f7765f89ef5f87059 "pdflatex"
+  "main.tex" 1734012077.34929 17189 eed8cb2dfce165edce3ac2b447611a00 ""
   (generated)
   "main.aux"
   "main.log"

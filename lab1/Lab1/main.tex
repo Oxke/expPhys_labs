@@ -326,7 +326,7 @@ F-statistic:  3073 on 1 and 19 DF,  p-value: < 2.2e-16
    residuals of the fit to see if the errors were independent and normally
    distributed (assuming homoscedasticity), which is what we expect:
    \lstinputlisting[language=R, firstline=21]{../analysis.r}
-   Which returns a p-value of \(0.65 > 0.05\), so we can't reject the null
+   Which returns a p-value of \(0.29 > 0.05\), so we can't reject the null
    hypothesis that the errors are independent and the fit is good.
 \begin{figure}
     \centering
@@ -388,19 +388,16 @@ points) is that the errors are independent and normally distributed, while the
 alternative hypothesis is that they are not. We will then take the biggest \(l\)
 such that we can't reject the null hypothesis. In \texttt{R} code this is:
 \lstinputlisting[language=R, firstline=8, lastline=20]{../analysis.r}
-obtaining that we need to keep the last 6 points. Finally we calculated the
-\(V\)-coordi\-nate of the fitting line of those 6 points. Since we know from the
+obtaining that we need to keep the last 9 points. Finally we calculated the
+\(V\)-coordi\-nate of the fitting line of those 9 points. Since we know from the
 linear model that the line has equation \(i = mv + q\), with \(m\) and \(q\)
 parameters saved in the variable \texttt{diode.lm\_threshold\$coefficients}, and
-because we know the error must be 
-\[
-    v = -\frac{q}{m} \implies \delta v = -\frac{\delta q}{m} + \frac{q\,\delta m}{m^2}
-\]
-obtaining a value of 
+we obtain
 \begin{align*}
-    q = -12.6 \pm 0.6 \,mA \quad m = 5.0 \pm 0.2 \,mA / V \\
-    \implies V_{\text{threshold}} = \frac{12.5}{5.0} \mp \frac{0.5}{5.0} \mp
-    \frac{12.6 \cdot 0.2}{5.0^2} = 2.51 \pm 0.23 V
+    q &= -10.3 \pm 0.6 \,mA \quad m = 4.1 \pm 0.2 \,mA / V \\
+    \implies V_{\text{threshold}} &= \frac{10.3}{4.1} \pm \sqrt{\left(
+    \frac{0.6}{-10.3} \right)^2 + \left( \frac{0.2}{4.1} \right)^2} = 2.50 \pm
+     0.8\,V
 \end{align*}
 
 \begin{figure}
@@ -416,7 +413,7 @@ obtaining a value of
         no markers,
         legend pos = north west,
         axis x line=bottom,
-        xtick = {2.4, 2.45, 2.51, 2.55},
+        xtick = {2.4, 2.45, 2.50, 2.55},
     ]
 
     \addplot+ [
@@ -433,11 +430,11 @@ obtaining a value of
         color=orange,
         thick,
         ]
-        {5005 * x - 12563};
+        {4101 * x - 10254};
     \addlegendentry{Linear fit}
 
     % vertical line at x = 2.51
-    \draw[dashed] (axis cs:2.51, -20) -- (axis cs:2.51, 320);
+    \draw[dashed] (axis cs:2.50, -20) -- (axis cs:2.50, 320);
 
     % horizontal line at y = 0
     \draw[dashed] (axis cs:2.395, 0) -- (axis cs:2.59, 0);
@@ -463,7 +460,7 @@ threshold voltage as the voltage at which the LED starts emitting light, the
 first photon has energy \(E = h\nu\) with \(\nu = c/\lambda \), \(c\) the speed of light and \(h\) Planck's constant. If we
 add \(E = qV_\text{threshold}  \) and solve for the wavelength \(\lambda\) we get
 \[
-    \lambda = \frac{hc}{qV_\text{threshold}  } \approx 495 \, nm
+    \lambda = \frac{hc}{qV_\text{threshold}  } \approx 496 \, nm
 \]
 which is in the range of blue light.
 
