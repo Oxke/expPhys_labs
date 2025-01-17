@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass[notitlepage]{report}
 \usepackage{layout}
 \usepackage[a4paper, total={5in,9in}]{geometry}
 \usepackage[T1]{fontenc}
@@ -21,6 +21,10 @@
 \usepackage[colorlinks]{hyperref}
 \usepackage{csvsimple}
 \usepackage{listings}
+\usepackage{titling}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{booktabs}
 
 \newcommand*{\sminus}{\raisebox{1.3pt}{$\smallsetminus$}}
 
@@ -55,8 +59,7 @@
         }
     }{\mdfsetup{
         frametitle={
-            \tikz[baseline=(current bounding box.east),outer sep=0pt]
-            \node[anchor=east,rectangle,fill=blue!20,rounded corners=5pt]
+            \tikz[baseline=(current bounding box.east),outer sep=0pt] \node[anchor=east,rectangle,fill=blue!20,rounded corners=5pt]
             {\strut Teorema~\thetheo:~#1};}
         }
     }
@@ -194,7 +197,156 @@
 
 \maketitle
 
+\begin{abstract}
+
+In the first laboratory the general objectives were to appropriately configure
+instruments to make resistance measurements, verify Ohm’s law and to measure
+the current voltage characterization of a non-linear device. In order to make
+the measurement we studied DC-fed circuits constructing the voltage current
+characteristic of the two different devices, that is to say an Ohmic conductor
+and a non-Ohmic conductor, the first one a resistor, the latter a diode.
+    
+\end{abstract}
+
+
 \chapter{Measurement of the current-voltage characteristic of a resistor}
+\section{Goal}
+In the first part of the experiment, we want to evaluate the best instrument
+configuration for the circuits given, verify Ohm’s law using the results
+obtained, and measure the composite resistances in parallel and in series of the
+circuit.
+
+\section{Setup}
+
+The setup for the experiment is shown in
+figure~\ref{fig:setup_exp1}.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth, trim={1cm 0 26cm 0}, clip]{figures/setup1.png}\caption{}\label{fig:setup1.11}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth, trim={28cm 0 0 0}, clip]{figures/setup1.png}\caption{}\label{fig:setup1.12}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures/setup2.jpg}\caption{}\label{fig:setup1.13}
+    \end{subfigure}
+    \begin{subfigure}[h]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{figures/setup3.jpg}\caption{}\label{fig:setup1.14}
+    \end{subfigure}
+    \caption{Setup of the first part of the experiment: on the top are shown two
+        diagrams, one for each of the two circuits. On the bottom are shown two
+    photos, one for each of the two setups}\label{fig:setup_exp1}
+\end{figure}
+
+
+
+\section{Method}
+\subsection{Evaluation of the best instrument configuration}
+In order to do the evaluation, we set up all the devices necessary to recreate
+the first circuit (image~\ref{fig:setup1.13}). With the aim of analyzing the best instrument
+configuration, we need to find the value of the voltmeter's internal resistance
+$R_V$ for setup 1 (image~\ref{fig:setup1.11}) and the ammeter's internal resistance $R_A$ for
+setup 2 (image~\ref{fig:setup1.12}). For $R_V$, we need to apply Ohm’s law to the parallel of
+resistors $R$ and $R_V$, and for $R_A$, to the series of resistors $R$ and
+$R_A$.
+
+After connecting every element, we started to try different values of the
+resistance ($R_{box}$) and the $V_{battery}$ produced by the power supply, in
+both setups. We obtained some values of $V$ (detected voltage) on the fluke and
+of the current (detected current). With these detections, we calculated firstly the
+resistance of the circuit using Ohm’s law:
+\[ R_\text{detected}  = \frac{V_\text{detected} }{I_\text{detected} } \]
+
+Using the found values of $R$, it was possible to calculate the voltmeter’s
+internal resistance $R_V$ and the ammeter’s internal resistance $R_A$. We
+arrived at these results using the equivalent resistance derived from Ohm’s law.
+For $R_V$, we used the formula for resistors in parallel, and for $R_A$, the
+formula for resistors in series:
+\begin{equation}
+    R_V = {\left( \frac{1}{R_\text{detected} } - \frac{1}{R_\text{box} }
+    \right)} ^{-1}
+\end{equation}
+\begin{equation}
+    R_A = R_\text{detected}  - R_\text{box}
+\end{equation}
+
+\subsection{Data}
+\begin{table}[ht]
+	{\small
+    \begin{tabular}{cccc}
+    \toprule
+       \bfseries Voltage (\(V\)) &
+       \bfseries Current (\(m A\)) &
+       \bfseries \(R_\text{expected}  \)  (\(\Omega\)) &
+       \bfseries \(R_\text{detected}\) (\(\Omega\))\\
+   \midrule
+       \csvreader[head to column names]{../datac.csv}{}%
+       {\Vdetected& \Idetapprox& \Rres& \Rdet\\}
+   \bottomrule
+\end{tabular}}
+    \caption{Data collected for the measurements of the composite
+    resistances}\label{fig:composite}
+\end{table}
+
+The data collected is shown in Table~\ref{fig:data}.
+
+\begin{table}[ht]
+    \scalebox{.5}{\small
+\begin{tabular}{ccc|cc}
+\toprule
+       {\bfseries Voltage (\(V\))} &
+       {\bfseries Current (\(\mu A\))} &
+       {\bfseries \(R_\text{box} \)  (\(M\Omega\))} &
+       {\bfseries \(R_\text{detected}\) (\(M\Omega\))} &
+       {\bfseries \(R_V\) (\(M\Omega\))}\\
+\midrule
+       \csvreader[head to column names]{../data1.csv}{}%
+       {\Vdet& \Idetapprox& \Rboxapprox& \Rdetapprox& \RVapprox\\}
+\bottomrule
+\end{tabular}}
+\scalebox{.5}{\small
+    \begin{tabular}{ccc|cc}
+        \toprule
+       {\bfseries Voltage (\(V\))} &
+       {\bfseries Current (\(\mu A\))} &
+       {\bfseries \(R_\text{box} \)  (\(k\Omega\))} &
+       {\bfseries \(R_\text{detected}\) (\(k\Omega\))} &
+       {\bfseries \(R_A\) (\(k\Omega\))}\\
+       \midrule
+       \csvreader[head to column names]{../data2.csv}{}%
+       {\Vdetu& \Idetapproxu& \Rboxapproxu& \Rdetapproxu& \RVapproxu\\}
+       \bottomrule
+    \end{tabular}
+}
+       \caption{Data collected for the measurements of \(R_V\) (left) and
+       \(R_A\) (right)}\label{fig:data}
+   \end{table}
+
+\subsection{Which of the two circuits is more suitable for measuring ``small''
+resistances and which for ``large'' resistances}
+Circuit (I) is more suitable for small resistances, while circuit (II) is better
+for large resistances because in this way their internal resistances are
+irrelevant. To prove this point, we analyzed the opposite case:
+\begin{itemize}
+    \item For circuit (I), we used large resistances and found that we have a constant internal resistance of the voltmeter ($R_V$). Since we found an internal resistance, we proved that, to have a negligible one, we need to use small resistances.
+    \item For circuit (II), we used small resistances and found that we have a constant internal resistance of the ammeter ($R_A$). Since we found an internal resistance, we proved that, to have a negligible one, we need to use large resistances.
+\end{itemize}
+
+\subsection{Verification of Ohm’s law}
+To check the validity of Ohm’s law, we used the values of $V_{battery}$ and $R_{box}$. Then, we calculated the current using the inverse of Ohm’s law:
+\[ I = \frac{V}{R} \]
+We observed that increasing the resistance results in a larger difference from the calculated and expected values.
+
+\subsection{Measurement of composite resistances}
+We picked resistors with values of 220. When in parallel, they become 110; when
+in series, they become 440. With the values obtained using all the instruments,
+we compared the two values of the resistance. The data table is shown in
+Table~\ref{fig:composite}
+
+
+
 \chapter{Measurement of the current-voltage characteristic of a diode}
 \section{Goal}
 Now we want to measure the current-voltage characteristic of a diode, which
@@ -377,7 +529,7 @@ F-statistic:  3073 on 1 and 19 DF,  p-value: < 2.2e-16
 \caption{Exponential fit of the data}\label{fig:fit}
 \end{figure}
 
-\subsection{Threshold voltage}
+\section{Threshold voltage}
 As explained before, the \emph{threshold voltage} is said to be the voltage at
 which a diode starts conducting a ``significant'' current. It's obtained by
 fitting the data as a linear relationship and then taking the x-intercept of the

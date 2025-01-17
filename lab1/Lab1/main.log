@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.7)  12 DEC 2024 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.7)  18 JAN 2025 00:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -827,32 +827,83 @@ File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
-\c@theo=\count386
-\c@excounter=\count387
-\c@tcb@cnt@definition=\count388
-\c@corollary=\count389
-\c@tcb@cnt@eser=\count390
+ (/usr/share/texmf-dist/tex/latex/titling/titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip129
+\thanksmargin=\skip130
+\droptitle=\skip131
+) (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen312
+\captionmargin=\dimen313
+\caption@leftmargin=\dimen314
+\caption@rightmargin=\dimen315
+\caption@width=\dimen316
+\caption@indent=\dimen317
+\caption@parindent=\dimen318
+\caption@hangindent=\dimen319
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count386
+\c@continuedfloat=\count387
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count388
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count389
+) (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen320
+\lightrulewidth=\dimen321
+\cmidrulewidth=\dimen322
+\belowrulesep=\dimen323
+\belowbottomsep=\dimen324
+\aboverulesep=\dimen325
+\abovetopsep=\dimen326
+\cmidrulesep=\dimen327
+\cmidrulekern=\dimen328
+\defaultaddspace=\dimen329
+\@cmidla=\count390
+\@cmidlb=\count391
+\@aboverulesep=\dimen330
+\@belowrulesep=\dimen331
+\@thisruleclass=\count392
+\@lastruleclass=\count393
+\@thisrulewidth=\dimen332
+)
+\c@theo=\count394
+\c@excounter=\count395
+\c@tcb@cnt@definition=\count396
+\c@corollary=\count397
+\c@tcb@cnt@eser=\count398
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 193.
-LaTeX Font Info:    ... okay on input line 193.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -890,16 +941,16 @@ LaTeX Font Info:    ... okay on input line 193.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count391
-\scratchdimen=\dimen312
+\scratchcounter=\count399
+\scratchdimen=\dimen333
 \scratchbox=\box90
-\nofMPsegments=\count392
-\nofMParguments=\count393
+\nofMPsegments=\count400
+\nofMParguments=\count401
 \everyMPshowfont=\toks56
-\MPscratchCnt=\count394
-\MPscratchDim=\dimen313
-\MPnumerator=\count395
-\makeMPintoPDFobject=\count396
+\MPscratchCnt=\count402
+\MPscratchDim=\dimen334
+\MPnumerator=\count403
+\makeMPintoPDFobject=\count404
 \everyMPtoPDFconversion=\toks57
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -918,60 +969,347 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring ON on input line 193.
+Package hyperref Info: Link coloring ON on input line 196.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-\c@lstlisting=\count397
-LaTeX Font Info:    Trying to load font information for U+msa on input line 196.
+\c@lstlisting=\count405
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 198.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 196.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 198.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 Chapter 1.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.198 \chapter
-              {Measurement of the current-voltage characteristic of a diode} [1
+<figures/setup1.png, id=86, 1450.41875pt x 496.85625pt>
+File: figures/setup1.png Graphic file (type png)
+<use figures/setup1.png>
+Package pdftex.def Info: figures/setup1.png  used on input line 227.
+(pdftex.def)             Requested size: 162.60638pt x 118.42914pt.
+File: figures/setup1.png Graphic file (type png)
+<use figures/setup1.png>
+Package pdftex.def Info: figures/setup1.png  used on input line 230.
+(pdftex.def)             Requested size: 162.60638pt x 123.58449pt.
+<figures/setup2.jpg, id=90, 1204.5pt x 1606.0pt>
+File: figures/setup2.jpg Graphic file (type jpg)
+<use figures/setup2.jpg>
+Package pdftex.def Info: figures/setup2.jpg  used on input line 233.
+(pdftex.def)             Requested size: 162.60638pt x 216.80064pt.
+<figures/setup3.jpg, id=91, 1204.5pt x 1606.0pt>
+File: figures/setup3.jpg Graphic file (type jpg)
+<use figures/setup3.jpg>
+Package pdftex.def Info: figures/setup3.jpg  used on input line 236.
+(pdftex.def)             Requested size: 162.60638pt x 216.80064pt.
+[2
 
 ]
+./main.tex:287: Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.287    \bottomrule
+                    
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./main.tex:288: Missing } inserted.
+<inserted text> 
+                }
+l.288 \end
+          {tabular}}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:288: Missing } inserted.
+<inserted text> 
+                }
+l.288 \end
+          {tabular}}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:288: Missing } inserted.
+<inserted text> 
+                }
+l.288 \end
+          {tabular}}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:288: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.288 \end
+          {tabular}}
+I'm guessing that you meant to end an alignment here.
+
+./main.tex:288: Missing { inserted.
+<inserted text> 
+                {
+l.288 \end
+          {tabular}}
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./main.tex:288: Undefined control sequence.
+\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
+                                                  
+l.288 \end
+          {tabular}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:288: Misplaced \crcr.
+<recently read> \crcr 
+                      
+l.288 \end{tabular}
+                   }
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./main.tex:288: Extra }, or forgotten $.
+\endtabular ->\crcr \egroup \egroup 
+                                    $\egroup 
+l.288 \end{tabular}
+                   }
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./main.tex:308: Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.308 \end{tabular}}
+                    
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./main.tex:308: Missing } inserted.
+<inserted text> 
+                }
+l.308 \end{tabular}}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:308: Missing } inserted.
+<inserted text> 
+                }
+l.308 \end{tabular}}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:308: Missing } inserted.
+<inserted text> 
+                }
+l.308 \end{tabular}}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:308: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.308 \end{tabular}}
+                    
+I'm guessing that you meant to end an alignment here.
+
+./main.tex:308: Missing { inserted.
+<inserted text> 
+                {
+l.308 \end{tabular}}
+                    
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./main.tex:308: Undefined control sequence.
+\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
+                                                  
+l.308 \end{tabular}}
+                    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:308: Misplaced \crcr.
+<recently read> \crcr 
+                      
+l.308 \end{tabular}}
+                    
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./main.tex:308: Extra }, or forgotten $.
+\endtabular ->\crcr \egroup \egroup 
+                                    $\egroup 
+l.308 \end{tabular}}
+                    
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./main.tex:322: Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.322 }
+       
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./main.tex:322: Missing } inserted.
+<inserted text> 
+                }
+l.322 }
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:322: Missing } inserted.
+<inserted text> 
+                }
+l.322 }
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:322: Missing } inserted.
+<inserted text> 
+                }
+l.322 }
+       
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./main.tex:322: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.322 }
+       
+I'm guessing that you meant to end an alignment here.
+
+./main.tex:322: Missing { inserted.
+<inserted text> 
+                {
+l.322 }
+       
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+./main.tex:322: Undefined control sequence.
+\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
+                                                  
+l.322 }
+       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:322: Misplaced \crcr.
+<recently read> \crcr 
+                      
+l.322 }
+       
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./main.tex:322: Extra }, or forgotten $.
+\endtabular ->\crcr \egroup \egroup 
+                                    $\egroup 
+l.322 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/setup2.jpg> <./figures/setup3.jpg> <./figures/setup1.png>] [4] [5]
 Chapter 2.
 (./figures/setup-diode.pdf_tex
-<./figures/setup-diode.pdf, id=58, page=1, 304.54962pt x 208.6419pt>
+<./figures/setup-diode.pdf, id=139, page=1, 304.54962pt x 208.6419pt>
 File: ./figures/setup-diode.pdf Graphic file (type pdf)
 <use ./figures/setup-diode.pdf, page 1>
 Package pdftex.def Info: ./figures/setup-diode.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 162.60638pt x 111.39786pt.
-<./figures/setup-diode.pdf, id=59, page=2, 304.54962pt x 208.6419pt>
+<./figures/setup-diode.pdf, id=140, page=2, 304.54962pt x 208.6419pt>
 File: ./figures/setup-diode.pdf Graphic file (type pdf)
 <use ./figures/setup-diode.pdf, page 2>
 Package pdftex.def Info: ./figures/setup-diode.pdf , page2 used on input line 59.
 (pdftex.def)             Requested size: 162.60638pt x 111.39786pt.
 )
-<figures/setup.png, id=60, 903.375pt x 911.65594pt>
+<figures/setup.png, id=141, 903.375pt x 911.65594pt>
 File: figures/setup.png Graphic file (type png)
 <use figures/setup.png>
-Package pdftex.def Info: figures/setup.png  used on input line 222.
+Package pdftex.def Info: figures/setup.png  used on input line 374.
 (pdftex.def)             Requested size: 162.60638pt x 164.09099pt.
-Package pgfplots info on input line 254: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
+Package pgfplots info on input line 406: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
 PGFPlots: reading {../data.csv}
 
-Overfull \hbox (6.34482pt too wide) in paragraph at lines 239--265
+Overfull \hbox (6.34482pt too wide) in paragraph at lines 391--417
 [][] [] 
  []
 
-[2
+[6
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 288.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 440.
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -981,32 +1319,32 @@ File: lstlang2.sty 2024/02/21 1.10 listings language file
 ) (/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2024/02/21 1.10 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 289.
- (../analysis.r) [3 <./figures/setup-diode.pdf> <./figures/setup-diode.pdf> <./figures/setup.png (PNG copy)>] (../analysis.r [4])
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 441.
+ (../analysis.r) [7 <./figures/setup-diode.pdf> <./figures/setup-diode.pdf> <./figures/setup.png (PNG copy)>] (../analysis.r [8])
 PGFPlots: reading {../data.csv}
- (../analysis.r) [5]
+ (../analysis.r) [9]
 PGFPlots: reading {../data.csv}
- [6] (./main.aux)
+ [10] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F1BA8BDCA891D25F7765F89EF5F87059;1456.
+(rerunfilecheck)             Checksum: 24674FC525579C7B60DCA71A6AE683B0;3213.
  ) 
 Here is how much of TeX's memory you used:
- 42611 strings out of 476065
- 984975 string characters out of 5793347
+ 44323 strings out of 476065
+ 1017781 string characters out of 5793347
  2125187 words of memory out of 5000000
- 63975 multiletter control sequences out of 15000+600000
- 578823 words of font info for 86 fonts, out of 8000000 for 9000
+ 65646 multiletter control sequences out of 15000+600000
+ 580718 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 122i,20n,129p,725b,2798s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (7 pages, 2890236 bytes).
+ 122i,20n,129p,725b,2821s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (10 pages, 3270392 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 48 named destinations out of 1000 (max. 500000)
- 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 351 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
