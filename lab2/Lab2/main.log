@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.7)  18 JAN 2025 01:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.7)  18 JAN 2025 18:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -881,24 +881,24 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 195.
-LaTeX Font Info:    ... okay on input line 195.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 196.
+LaTeX Font Info:    ... okay on input line 196.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -964,7 +964,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring ON on input line 195.
+Package hyperref Info: Link coloring ON on input line 196.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -972,11 +972,11 @@ Package hyperref Info: Link coloring ON on input line 195.
 \c@lstlisting=\count405
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 197.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 198.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 197.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 198.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -986,12 +986,12 @@ Chapter 1.
 <figures/probes_test.jpeg, id=93, 1082.0425pt x 1047.915pt>
 File: figures/probes_test.jpeg Graphic file (type jpg)
 <use figures/probes_test.jpeg>
-Package pdftex.def Info: figures/probes_test.jpeg  used on input line 234.
+Package pdftex.def Info: figures/probes_test.jpeg  used on input line 235.
 (pdftex.def)             Requested size: 180.67499pt x 174.97719pt.
 <figures/RC_pictures.jpeg, id=96, 1606.0pt x 816.04875pt>
 File: figures/RC_pictures.jpeg Graphic file (type jpg)
 <use figures/RC_pictures.jpeg>
-Package pdftex.def Info: figures/RC_pictures.jpeg  used on input line 249.
+Package pdftex.def Info: figures/RC_pictures.jpeg  used on input line 250.
 (pdftex.def)             Requested size: 361.34999pt x 183.60304pt.
 [2
 
@@ -999,22 +999,22 @@ Package pdftex.def Info: figures/RC_pictures.jpeg  used on input line 249.
 <figures/RC_graph_1.JPG, id=126, 256.96pt x 192.72pt>
 File: figures/RC_graph_1.JPG Graphic file (type jpg)
 <use figures/RC_graph_1.JPG>
-Package pdftex.def Info: figures/RC_graph_1.JPG  used on input line 317.
+Package pdftex.def Info: figures/RC_graph_1.JPG  used on input line 318.
 (pdftex.def)             Requested size: 144.53778pt x 108.40472pt.
 <figures/RC_graph_2.JPG, id=127, 256.96pt x 192.72pt>
 File: figures/RC_graph_2.JPG Graphic file (type jpg)
 <use figures/RC_graph_2.JPG>
-Package pdftex.def Info: figures/RC_graph_2.JPG  used on input line 324.
+Package pdftex.def Info: figures/RC_graph_2.JPG  used on input line 325.
 (pdftex.def)             Requested size: 144.53778pt x 108.40472pt.
 <figures/RC_graph_3.JPG, id=128, 256.96pt x 192.72pt>
 File: figures/RC_graph_3.JPG Graphic file (type jpg)
 <use figures/RC_graph_3.JPG>
-Package pdftex.def Info: figures/RC_graph_3.JPG  used on input line 331.
+Package pdftex.def Info: figures/RC_graph_3.JPG  used on input line 332.
 (pdftex.def)             Requested size: 144.53778pt x 108.40472pt.
 <figures/RC_graph_4.JPG, id=129, 256.96pt x 192.72pt>
 File: figures/RC_graph_4.JPG Graphic file (type jpg)
 <use figures/RC_graph_4.JPG>
-Package pdftex.def Info: figures/RC_graph_4.JPG  used on input line 338.
+Package pdftex.def Info: figures/RC_graph_4.JPG  used on input line 339.
 (pdftex.def)             Requested size: 144.53778pt x 108.40472pt.
 
 
@@ -1024,7 +1024,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figures/RL_graph_4.JPG, id=144, 256.96pt x 192.72pt>
 File: figures/RL_graph_4.JPG Graphic file (type jpg)
 <use figures/RL_graph_4.JPG>
-Package pdftex.def Info: figures/RL_graph_4.JPG  used on input line 383.
+Package pdftex.def Info: figures/RL_graph_4.JPG  used on input line 384.
 (pdftex.def)             Requested size: 144.53778pt x 108.40472pt.
 
 
@@ -1033,7 +1033,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figures/RL_graph_1.JPG, id=145, 256.96pt x 192.72pt>
 File: figures/RL_graph_1.JPG Graphic file (type jpg)
 <use figures/RL_graph_1.JPG>
-Package pdftex.def Info: figures/RL_graph_1.JPG  used on input line 390.
+Package pdftex.def Info: figures/RL_graph_1.JPG  used on input line 391.
 (pdftex.def)             Requested size: 144.53778pt x 108.40472pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1041,7 +1041,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figures/RL_graph_2.JPG, id=146, 256.96pt x 192.72pt>
 File: figures/RL_graph_2.JPG Graphic file (type jpg)
 <use figures/RL_graph_2.JPG>
-Package pdftex.def Info: figures/RL_graph_2.JPG  used on input line 397.
+Package pdftex.def Info: figures/RL_graph_2.JPG  used on input line 398.
 (pdftex.def)             Requested size: 144.53778pt x 108.40472pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1049,7 +1049,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figures/RL_graph_3.JPG, id=147, 256.96pt x 192.72pt>
 File: figures/RL_graph_3.JPG Graphic file (type jpg)
 <use figures/RL_graph_3.JPG>
-Package pdftex.def Info: figures/RL_graph_3.JPG  used on input line 404.
+Package pdftex.def Info: figures/RL_graph_3.JPG  used on input line 405.
 (pdftex.def)             Requested size: 144.53778pt x 108.40472pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1059,17 +1059,17 @@ Chapter 2.
 <figures/RLC_setup_1.jpg, id=171, 903.375pt x 1204.5pt>
 File: figures/RLC_setup_1.jpg Graphic file (type jpg)
 <use figures/RLC_setup_1.jpg>
-Package pdftex.def Info: figures/RLC_setup_1.jpg  used on input line 450.
+Package pdftex.def Info: figures/RLC_setup_1.jpg  used on input line 451.
 (pdftex.def)             Requested size: 162.60638pt x 216.80064pt.
 <figures/RLC_setup_2.jpg, id=172, 903.375pt x 1204.5pt>
 File: figures/RLC_setup_2.jpg Graphic file (type jpg)
 <use figures/RLC_setup_2.jpg>
-Package pdftex.def Info: figures/RLC_setup_2.jpg  used on input line 453.
+Package pdftex.def Info: figures/RLC_setup_2.jpg  used on input line 454.
 (pdftex.def)             Requested size: 162.60638pt x 216.80064pt.
 <figures/diagram_RLC.png, id=173, 1138.2525pt x 672.5125pt>
 File: figures/diagram_RLC.png Graphic file (type png)
 <use figures/diagram_RLC.png>
-Package pdftex.def Info: figures/diagram_RLC.png  used on input line 456.
+Package pdftex.def Info: figures/diagram_RLC.png  used on input line 457.
 (pdftex.def)             Requested size: 361.34999pt x 213.49469pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1080,22 +1080,22 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figures/RLC_graph_1.jpg, id=186, 642.4pt x 481.8pt>
 File: figures/RLC_graph_1.jpg Graphic file (type jpg)
 <use figures/RLC_graph_1.jpg>
-Package pdftex.def Info: figures/RLC_graph_1.jpg  used on input line 519.
+Package pdftex.def Info: figures/RLC_graph_1.jpg  used on input line 520.
 (pdftex.def)             Requested size: 162.60638pt x 121.94943pt.
 <figures/RLC_graph_2.jpg, id=187, 642.4pt x 481.8pt>
 File: figures/RLC_graph_2.jpg Graphic file (type jpg)
 <use figures/RLC_graph_2.jpg>
-Package pdftex.def Info: figures/RLC_graph_2.jpg  used on input line 520.
+Package pdftex.def Info: figures/RLC_graph_2.jpg  used on input line 521.
 (pdftex.def)             Requested size: 162.60638pt x 121.94943pt.
 <figures/RLC_graph_3.jpg, id=190, 642.4pt x 481.8pt>
 File: figures/RLC_graph_3.jpg Graphic file (type jpg)
 <use figures/RLC_graph_3.jpg>
-Package pdftex.def Info: figures/RLC_graph_3.jpg  used on input line 554.
+Package pdftex.def Info: figures/RLC_graph_3.jpg  used on input line 555.
 (pdftex.def)             Requested size: 162.60638pt x 121.94943pt.
 <figures/RLC_graph_4.jpg, id=191, 642.4pt x 481.8pt>
 File: figures/RLC_graph_4.jpg Graphic file (type jpg)
 <use figures/RLC_graph_4.jpg>
-Package pdftex.def Info: figures/RLC_graph_4.jpg  used on input line 555.
+Package pdftex.def Info: figures/RLC_graph_4.jpg  used on input line 556.
 (pdftex.def)             Requested size: 162.60638pt x 121.94943pt.
 
 
@@ -1118,7 +1118,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  122i,9n,129p,725b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (12 pages, 2443830 bytes).
+Output written on main.pdf (12 pages, 2447036 bytes).
 PDF statistics:
  303 PDF objects out of 1000 (max. 8388607)
  230 compressed objects within 3 object streams

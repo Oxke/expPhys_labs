@@ -169,8 +169,8 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
+    commentstyle=\color{gray},
+    keywordstyle=\color{blue},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
@@ -189,7 +189,7 @@
 \lstset{style=mystyle}
 
 \title{Report Lab 3\\\small Experimental Physics for AI 2}
-\author{G, D, O}
+\author{Osea Fracchia, Gabriele Roberto Bovo, Doğa Tekeli}
 \date{First semester 2024 \-- 2025}
 
 \begin{document}
@@ -199,7 +199,7 @@
 \begin{abstract}
     This laboratory experience consisted of three different experiments
     concerning electromagnetism. The first one is a visualization of the
-    electric field lines through a conductor. The second one is a measurement of
+    electric field lines through a capacitor. The second one is a measurement of
     earth's magnetic field using the phone's magnetometer. The third one is a
     measurement of the magnetic field induced by a coil.
 \end{abstract}
@@ -209,25 +209,30 @@
 
 \section{Goal}
 The main goal of this experiment is to visualize the field lines of the electric
-field inside a conductor. While we can't directly observe the electric field, we
-can measure the electric potential at different points inside the conductor and
+field inside an insulator. While we can't directly observe the electric field, we
+can measure the electric potential at different points inside the insulator and
 thus infer the electric field lines, as we know that
 \[
     \vec{E} = -\nabla V
 \]
 Thus what we want to do at first is to measure accurately the electric potential
-in a grid of points inside the conductor.
+in a grid of points inside the insulator.
 
 We expect to see that the vector field is mostly aligned vertically inside the
-conductor while on the edges it should be slightly more curved due to the lack
-of charges on the outside of the conductor, the result is a rectangle with
+insulator while on the edges it should be slightly more curved due to the lack
+of charges on the outside of the insulator, the result is a rectangle with
 rounded shapes on the east and west sides.
 \section{Method}
-Firstly, the chosen conductor is a graphite sheet placed on a flat wooden board,
-with a grid of points marked on it.
-It has the north and south sides connected with a metal bar. A low current, 5V
-DC power supply is connected to the conductor. The electric potential inside the
-conductor is then measured using a multimeter. The whole setup is shown in
+Firstly, the chosen insulator is a graphite sheet placed on a flat wooden board,
+with a grid of points marked on it. This choice is because actually graphite is
+conductive, but as we are working with extremely small currents (approximately
+0\(mu A\)), it will act as an insulator for our purposes, but we know that the
+very low current that will actually move, will move through the graphite, since
+it's much more conductive than air.
+The sheet has the north and south sides connected with a metal bar. A
+low current, 5V DC power supply is connected to the sheet. The electric
+potential inside it is then measured using a multimeter. The whole
+setup is shown in
 Figure~\ref{fig:setup-visualize}.
 
 It's useful to place a reference system on the board to be able to address each
@@ -257,40 +262,94 @@ point on the \(x\) and \(y\) axis, respectively.
         \node[align=center, text=red, font=\LARGE] at (0.352,0.25) {\(y\)}; % Example text
     \end{scope}
 \end{tikzpicture}
-    \caption{Experimental setup for recording electric potential inside a
-    conductor. In red are shown the axes used for addressing points.
+    \caption{Experimental setup for recording electric potential inside an
+        insulator. In red are shown the axes used for addressing points.
 The unit is the same as the smallest grid width on the
 board, which marks centimeters. The origin \(0,0\) is placed at the intersection
 of the axes }\label{fig:setup-visualize}
 \end{figure}
 
+\section{Data}
+The data is imported from a CSV file, and its content is shown in
+Table~\ref{tab:data-vis} for a sample of the points (Only points of coordinates
+non-zero, multiples of 6 are shown for brevity). Note that as a consequence of
+the configuration of the board, points on the \(x\)  axis are all of same potential,
+so each of their \(V_y\) is zero, and similarly for points of coordinates \((x,
+25)\). 
+
+We used a hand-held Fluke multimeter to measure the potential differences. Its
+accuracy specification on the DC Volts is \(0.5\% + 0.002V\) in the \(6V\)
+range.
+
+\begin{table}[h]
+\centering
+\begin{tabular}[ht]{cc|rl|rl}
+       \toprule
+       \bfseries \(x\) & \bfseries \(y\) &
+       \multicolumn{2}{c}{\(V_x{(x, y)}\,\, (V)\)} &
+       \multicolumn{2}{c}{\(V_y{(x, y)} \,\,(V)\)} \\
+       \midrule
+       \csvreader[head to column names]{../data_show.csv}{}%
+       {\x&\y& \Vx& $\pm$ \errVx& \Vy& $\pm$ \errVy\\}
+       \bottomrule
+\end{tabular}
+\caption{Data collected for the electric potential inside the
+graphite sheet}\label{tab:data-vis}
+\end{table}
+
+It has to be noted that, since the setup was not perfectly controlled and
+calibrated, and we changed person taking the measurements during the experiment,
+and it was a bit uncomfortable to measure the potential at each point, the
+measures might have a (bigger) degree of statistical uncertainty due to human
+error. However we didn't take measures multiple times so we can't estimate the
+size of this error. We will proceed with the visualization of the field lines
+without taking errors into account.
+
+
 \section{Analysis}
 We analyzed the collected data to calculate the electric field at each point
 restricted to the \(xy\) plane. The python script used to calculate and then
 plot the field is shown in Listing~\ref{lst:script-1}. The script
-achieves this by calculating at each point the difference quotients of the
-potential with respect to \(x\) and \(y\) explicitly, this means:
+achieves this by calculating at each point the (backwards) incremental ratios
+of the potential with respect to \(x\) and \(y\) explicitly, this means:
 \begin{align}
     E_x(x, y) = -\frac{\partial V}{\partial x} \approx -\frac{\Delta V}{\Delta
-    x} = \frac{V_x{(x, y)} - V_x{(x+3, y)}}{3\,cm}\label{eq:diff-quotients_x}\\
+    x} = \frac{V_x{(x-3, y)} - V_x{(x, y)}}{3\,cm}\label{eq:diff-quotients_x}\\
     E_y(x, y) =  -\frac{\partial V}{\partial y} \approx -\frac{\Delta V}{\Delta
-    y} = \frac{V_y{(x, y)} - V_y{(x, y+3)}}{3\,cm}\label{eq:diff-quotients_y}
+    y} = \frac{V_y{(x, y-3)} - V_y{(x, y)}}{3\,cm}\label{eq:diff-quotients_y}
 \end{align}
-where the 3 comes from how we sampled the points, which were 3 cm apart. 
+where the 3 comes from how we sampled the points, which were 3 cm apart. The
+field is so calculated for each point in the grid except for the axes.
+
 
 \lstinputlisting[language=Python, caption={Python script for calculating the
 electric field from the potential data},
-label={lst:script-1}, firstline=1, lastline=8]{script.py}
+label={lst:script-1}, firstline=1, lastline=20]{../script.py}
 
-Finally we plotted the electric vector field using the quiver plot function from
-the matplotlib library. The resulting plot is shown in
+Finally we plotted the electric vector field using the \emph{quiver} plot function from
+the \href{https://matplotlib.org/}{matplotlib} library. The resulting plot is shown in Figure~\ref{fig:field}.
 \section{Results}
+We expected the electric field to be mostly vertical, and directed from north to
+south inside the sheet. The down direction is because the anode is placed on
+the \(y=25\) line and the cathode on the \(y=0\) line, as can be seen in
+figure~\ref{fig:setup-visualize}. The field lines are slightly curved on the
+edges toward the outside of the sheet, as we can see in the plot.
+
+The result is consistent with our knowledge of real capacitors.
+
+\begin{figure}[h!t]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/field.png}
+    \caption{Electric field lines inside the insulator}\label{fig:field}
+\end{figure}
+
 \section{Conclusion}
-As we expected, the electric field lines are mostly vertical inside the board
-and slightly curved on the edges. When modeling in a naive way the electric
-field, we usually think of it completely vertical, as it would be in an infinite
-parallel plate capacitor. However, in a real conductor, the field lines are more
-curved on the edges, as we observed in the experiment. 
+As we expected, the electric field lines are mostly vertical from north to south
+inside the board and slightly curved on the edges. 
+When modeling in a naive way the electric field, we usually think of it as
+completely vertical, as it would be in an infinite parallel plate capacitor.
+However, in a real plane (or in this case segment) capacitor, the field lines
+are more curved on the edges, as we observed qualitatively in this experiment. 
 
 \chapter{Measuring the Earth’s Magnetic Field using a phone}
 

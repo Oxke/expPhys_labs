@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.7)  18 JAN 2025 00:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.7)  18 JAN 2025 18:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -886,24 +886,24 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 196.
-LaTeX Font Info:    ... okay on input line 196.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 197.
+LaTeX Font Info:    ... okay on input line 197.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -969,7 +969,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring ON on input line 196.
+Package hyperref Info: Link coloring ON on input line 197.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -977,11 +977,11 @@ Package hyperref Info: Link coloring ON on input line 196.
 \c@lstlisting=\count405
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 198.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 199.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 198.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 199.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -991,37 +991,37 @@ Chapter 1.
 <figures/setup1.png, id=86, 1450.41875pt x 496.85625pt>
 File: figures/setup1.png Graphic file (type png)
 <use figures/setup1.png>
-Package pdftex.def Info: figures/setup1.png  used on input line 227.
+Package pdftex.def Info: figures/setup1.png  used on input line 228.
 (pdftex.def)             Requested size: 162.60638pt x 118.42914pt.
 File: figures/setup1.png Graphic file (type png)
 <use figures/setup1.png>
-Package pdftex.def Info: figures/setup1.png  used on input line 230.
+Package pdftex.def Info: figures/setup1.png  used on input line 231.
 (pdftex.def)             Requested size: 162.60638pt x 123.58449pt.
 <figures/setup2.jpg, id=90, 1204.5pt x 1606.0pt>
 File: figures/setup2.jpg Graphic file (type jpg)
 <use figures/setup2.jpg>
-Package pdftex.def Info: figures/setup2.jpg  used on input line 233.
+Package pdftex.def Info: figures/setup2.jpg  used on input line 234.
 (pdftex.def)             Requested size: 162.60638pt x 216.80064pt.
 <figures/setup3.jpg, id=91, 1204.5pt x 1606.0pt>
 File: figures/setup3.jpg Graphic file (type jpg)
 <use figures/setup3.jpg>
-Package pdftex.def Info: figures/setup3.jpg  used on input line 236.
+Package pdftex.def Info: figures/setup3.jpg  used on input line 237.
 (pdftex.def)             Requested size: 162.60638pt x 216.80064pt.
 [2
 
 ]
-./main.tex:287: Misplaced \noalign.
+./main.tex:288: Misplaced \noalign.
 \bottomrule ->\noalign 
                        {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
-l.287    \bottomrule
+l.288    \bottomrule
                     
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./main.tex:288: Missing } inserted.
+./main.tex:289: Missing } inserted.
 <inserted text> 
                 }
-l.288 \end
+l.289 \end
           {tabular}}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1029,10 +1029,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:288: Missing } inserted.
+./main.tex:289: Missing } inserted.
 <inserted text> 
                 }
-l.288 \end
+l.289 \end
           {tabular}}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1040,10 +1040,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:288: Missing } inserted.
+./main.tex:289: Missing } inserted.
 <inserted text> 
                 }
-l.288 \end
+l.289 \end
           {tabular}}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1051,26 +1051,26 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:288: Missing \cr inserted.
+./main.tex:289: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.288 \end
+l.289 \end
           {tabular}}
 I'm guessing that you meant to end an alignment here.
 
-./main.tex:288: Missing { inserted.
+./main.tex:289: Missing { inserted.
 <inserted text> 
                 {
-l.288 \end
+l.289 \end
           {tabular}}
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./main.tex:288: Undefined control sequence.
+./main.tex:289: Undefined control sequence.
 \@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
                                                   
-l.288 \end
+l.289 \end
           {tabular}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1078,10 +1078,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:288: Misplaced \crcr.
+./main.tex:289: Misplaced \crcr.
 <recently read> \crcr 
                       
-l.288 \end{tabular}
+l.289 \end{tabular}
                    }
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1089,10 +1089,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./main.tex:288: Extra }, or forgotten $.
+./main.tex:289: Extra }, or forgotten $.
 \endtabular ->\crcr \egroup \egroup 
                                     $\egroup 
-l.288 \end{tabular}
+l.289 \end{tabular}
                    }
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1100,18 +1100,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:308: Misplaced \noalign.
+./main.tex:309: Misplaced \noalign.
 \bottomrule ->\noalign 
                        {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./main.tex:308: Missing } inserted.
+./main.tex:309: Missing } inserted.
 <inserted text> 
                 }
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1119,10 +1119,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:308: Missing } inserted.
+./main.tex:309: Missing } inserted.
 <inserted text> 
                 }
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1130,10 +1130,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:308: Missing } inserted.
+./main.tex:309: Missing } inserted.
 <inserted text> 
                 }
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1141,26 +1141,26 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:308: Missing \cr inserted.
+./main.tex:309: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 I'm guessing that you meant to end an alignment here.
 
-./main.tex:308: Missing { inserted.
+./main.tex:309: Missing { inserted.
 <inserted text> 
                 {
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./main.tex:308: Undefined control sequence.
+./main.tex:309: Undefined control sequence.
 \@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
                                                   
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1168,10 +1168,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:308: Misplaced \crcr.
+./main.tex:309: Misplaced \crcr.
 <recently read> \crcr 
                       
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1179,10 +1179,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./main.tex:308: Extra }, or forgotten $.
+./main.tex:309: Extra }, or forgotten $.
 \endtabular ->\crcr \egroup \egroup 
                                     $\egroup 
-l.308 \end{tabular}}
+l.309 \end{tabular}}
                     
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1190,18 +1190,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:322: Misplaced \noalign.
+./main.tex:323: Misplaced \noalign.
 \bottomrule ->\noalign 
                        {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
-l.322 }
+l.323 }
        
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./main.tex:322: Missing } inserted.
+./main.tex:323: Missing } inserted.
 <inserted text> 
                 }
-l.322 }
+l.323 }
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1209,10 +1209,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:322: Missing } inserted.
+./main.tex:323: Missing } inserted.
 <inserted text> 
                 }
-l.322 }
+l.323 }
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1220,10 +1220,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:322: Missing } inserted.
+./main.tex:323: Missing } inserted.
 <inserted text> 
                 }
-l.322 }
+l.323 }
        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1231,26 +1231,26 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./main.tex:322: Missing \cr inserted.
+./main.tex:323: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.322 }
+l.323 }
        
 I'm guessing that you meant to end an alignment here.
 
-./main.tex:322: Missing { inserted.
+./main.tex:323: Missing { inserted.
 <inserted text> 
                 {
-l.322 }
+l.323 }
        
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
-./main.tex:322: Undefined control sequence.
+./main.tex:323: Undefined control sequence.
 \@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
                                                   
-l.322 }
+l.323 }
        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1258,10 +1258,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./main.tex:322: Misplaced \crcr.
+./main.tex:323: Misplaced \crcr.
 <recently read> \crcr 
                       
-l.322 }
+l.323 }
        
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1269,10 +1269,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./main.tex:322: Extra }, or forgotten $.
+./main.tex:323: Extra }, or forgotten $.
 \endtabular ->\crcr \egroup \egroup 
                                     $\egroup 
-l.322 }
+l.323 }
        
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1297,19 +1297,19 @@ Package pdftex.def Info: ./figures/setup-diode.pdf , page2 used on input line 59
 <figures/setup.png, id=141, 903.375pt x 911.65594pt>
 File: figures/setup.png Graphic file (type png)
 <use figures/setup.png>
-Package pdftex.def Info: figures/setup.png  used on input line 374.
+Package pdftex.def Info: figures/setup.png  used on input line 375.
 (pdftex.def)             Requested size: 162.60638pt x 164.09099pt.
-Package pgfplots info on input line 406: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
+Package pgfplots info on input line 408: Using 'lua backend=false' for axis: ymode=log unsupported (yet).
 PGFPlots: reading {../data.csv}
 
-Overfull \hbox (6.34482pt too wide) in paragraph at lines 391--417
+Overfull \hbox (6.34482pt too wide) in paragraph at lines 393--419
 [][] [] 
  []
 
 [6
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 440.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 442.
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1319,7 +1319,7 @@ File: lstlang2.sty 2024/02/21 1.10 listings language file
 ) (/usr/share/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2024/02/21 1.10 listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 441.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 443.
  (../analysis.r) [7 <./figures/setup-diode.pdf> <./figures/setup-diode.pdf> <./figures/setup.png (PNG copy)>] (../analysis.r [8])
 PGFPlots: reading {../data.csv}
  (../analysis.r) [9]
@@ -1341,7 +1341,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  122i,20n,129p,725b,2821s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (10 pages, 3270392 bytes).
+Output written on main.pdf (10 pages, 3273584 bytes).
 PDF statistics:
  351 PDF objects out of 1000 (max. 8388607)
  268 compressed objects within 3 object streams
